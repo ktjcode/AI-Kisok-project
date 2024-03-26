@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>모드 선택</title>
+    <style>
+        /* 여기에 스타일을 적용하세요 */
+        * {
+            font-size: 1.2em;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Nanum Gothic', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+
+        /* 배너 컨테이너를 수직 및 수평으로 가운데 정렬합니다. */
+        #mode_banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* 넘치는 부분을 숨깁니다. */
+        }
+
+        /* 배너 이미지에 대한 스타일 설정 */
+        #mode_banner img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        
+        #mode-btn-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+        }
+        .mode-btn {
+            width: 48%;
+            height: 400px;
+            background-color: #8c8c8c;
+            border-radius: 30px;
+            text-align: center;
+            font-weight: bold;
+            line-height: 400px;
+            margin: 40px;
+        }
+        .mode-btn > a {
+            display: block;
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+        }
+        .mode-btn > a:hover {
+            background-color: #d72300;
+            border-radius: 30px;
+            color : white
+        }
+    </style>
+</head>
+<body>
+    <div id="mode_banner">
+        <img src="{{ url_for('static', filename='images/banner1.png') }}" alt="Banner Image">
+    </div>
+
+    <div id="mode-btn-wrapper">
+        <div class="mode-btn">
+            <a href="{{ url_for('basic') }}">일반 모드</a>
+        </div>
+        <div class="mode-btn">
+            <a href="{{ url_for('index') }}">간편 모드</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

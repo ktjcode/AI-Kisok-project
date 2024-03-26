@@ -1,0 +1,340 @@
+/* Add styles for the container */
+.container {
+    max-width: 1080px; /* 컨테이너의 최대 너비를 1080px로 설정 */
+    width: 100%; /* 너비를 100%로 설정하여 내용이 화면에 딱 맞게 표시되도록 함 */
+    height: 1920px; /* 컨테이너의 높이를 내용에 맞게 자동 조절 */
+    margin: 0 auto; /* 가운데 정렬 */
+    text-align: center;
+    overflow-x: hidden; /* 가로 스크롤 막기 */
+}
+
+
+/* 배너 스타일 추가 */
+.banner {
+    width: 1080px;
+    margin: auto;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 1080px;
+    height: auto;
+}
+
+/* Match the width of the tabs to the menu container */
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+    width: 100%; /* Match the width to the menu container */
+    margin: 0 auto;
+    border: 1px solid #ccc; /* Tab menu border */
+    font-weight: bold;
+}
+
+.tab {
+    background-color: #fff;
+    color: #b8b8b8;
+    padding: 20px;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-bottom : 6px solid #fff;
+}
+
+.tab.active {
+    background-color: #fff;
+    border-bottom : 6px solid #d72300;
+    border-bottom-color: #d72300; /* Change the border color for the active tab */
+    color: #d72300; /* Change the text color for the active tab */
+}
+
+/* Center align the menu items container and make it narrower than tabs */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 세 개의 열로 정렬 */
+    grid-gap: 1px;
+    width: 100%; /* 100%로 설정하여 컨테이너에 맞게 표시 */
+    margin: 0 auto;
+    text-align: center;
+    max-height: 60%;
+    overflow-y: auto; /* 필요시 세로 스크롤 추가 */
+}
+
+
+
+/* Center align the menu items */
+.menu {
+    text-align: center;
+}
+
+/* Style each menu item to fit within the menu container */
+.menu-item {
+    max-width: 100%; /* 최대 너비 설정 */
+    height: auto; /* 높이를 내용에 맞게 자동 조절 */
+    font-size: 23px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* 패딩과 테두리를 너비 계산에 포함 */
+    font-weight: bold;
+}
+
+/* name 항목에 margin 설정 */
+.menu-item h3 {
+    margin-top: 20px; /* 상단 마진 설정 */
+    margin-bottom: 15px; /* 하단 마진 설정 */
+}
+
+/* price 항목에 margin 설정 */
+.menu-item p {
+    margin-top: 15px; /* 상단 마진 설정 */
+    margin-bottom: 40px; /* 하단 마진 설정 */
+    color : #d72300;
+}
+
+.menu-item img {
+    max-width: auto; /* Adjust the maximum width as needed */
+    height: 180px; /* Maintain the aspect ratio of the images */
+}
+
+/* "Add to Order" 버튼에 대한 스타일 수정 */
+.add-to-order {
+    background-color: #d72300; /* 원하는 배경색 설정 */
+    color: #fff; /* 원하는 텍스트 색상 설정 */
+    font-size: 24px; /* 원하는 폰트 크기 설정 */
+    font-weight: bold;
+    padding: 12px 20px; /* 원하는 패딩 설정 (상하 12px, 좌우 20px) */
+    border: none; /* 테두리 제거 */
+    cursor: pointer;
+    width: 300px;
+    height: 70px;
+    border-radius: 10px;
+}
+
+/* Styles for chosen menu section */
+.chosen-menu {
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    background-color: #f2ebe6;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.chosen-menu-titles {
+    display: flex;
+}
+.left-section {
+    display: flex;
+    align-items: baseline;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: row; /* 우측 영역을 세로로 정렬하기 위해 flex 방향을 column으로 변경 */
+    align-items: flex-end; /* 우측 정렬 설정 */
+}
+
+.chosen-menu h1 {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+#chosen-menu-count {
+    font-size: 30px;
+    background-color: #d72300;
+    color: #fff;
+    padding: 5px 25px 2px 25px;
+    border-radius: 20px;
+}
+
+
+
+.chosen-items {
+    text-align: left;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    max-height: 270px; /* 최대 높이를 300px로 지정 */
+    overflow-y: auto; /* 세로 스크롤 추가 */
+}
+
+.chosen-items p {
+    margin : 5px;
+    margin-left: 0px;
+}
+
+.total {
+    margin-right: 20px;
+    padding-right : 40px;
+    text-align: right;
+    align-self: flex-end; /* 우측 정렬 유지 */
+}
+
+.chosen-button {
+    display: flex; /* 자식 요소를 가로로 정렬하기 위해 flex 컨테이너로 설정 */
+    justify-content: space-between; /* 자식 요소 사이의 공간을 최대로 확보 */
+    margin-top: 20px;
+}
+
+.chosen-button button {
+    flex-grow: 1; /* 버튼 요소가 가능한 한 가로로 확장 */
+    width: 48%; /* 고정 너비 제거 */
+    height: 80px;
+    border-radius: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+}
+
+#home-button {
+    margin-right: 10px; /* home-button에 오른쪽 마진 추가 */
+    background-color: #502416;
+    
+}
+
+#order-button {
+    margin-left: 10px; /* order-button에 왼쪽 마진 추가 */
+    background-color: #d72300;
+}
+
+/* Add more styles as needed */
+
+/* Styles for chosen item cards */
+.chosen-item {
+    background-color: #fff; /* 흰색 배경색 */
+    padding: 15px;
+    padding-left : 25px;
+    padding-right : 25px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.modify-buttons {
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.modify-button {
+    background-color: #cccccc;
+    color: #000;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.delete-button {
+    background-color: #d72300;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+/* 모달 팝업 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 배경 어둡게 처리 */
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+    float: right;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+/* 팝업 내용 스타일 */
+.popup-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.popup-content h1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+/* 옵션 라벨 스타일 */
+label {
+    margin-bottom: 30px; /* 각 옵션 아래에 여백 추가 */
+    display: flex; /* 옵션을 가로로 정렬하기 위해 flex 컨테이너로 설정 */
+    align-items: center; /* 옵션 아이템을 세로 가운데 정렬 */
+}
+
+/* 옵션명 스타일 */
+.option-name {
+    flex-grow: 1; /* 옵션명이 가능한 한 가로로 확장 */
+    font-size: 30px; /* 원하는 폰트 크기 설정 */
+    margin-left: 20px;
+}
+
+/* 가격 스타일 */
+.option-price {
+    margin-left: 20px; /* 옵션명과 가격 사이 여백 설정 */
+    font-size: 30px; /* 원하는 폰트 크기 설정 */
+}
+
+/* 저장 버튼 스타일 */
+#option-modal-save {
+    width: 100%;
+    padding: 20px;
+    background-color: #d72300;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 30px;
+    align-items: center;
+}
+
+
+/* Dimming 스타일 */
+.dimmed {
+    filter: blur(2px); /* 모달 팝업 뒤의 내용을 흐리게 처리 */
+    pointer-events: none; /* 모달 팝업 위의 내용에 클릭 및 이벤트 전달 방지 */
+}
